@@ -100,6 +100,21 @@ fieldset{
 	margin: .1rem;
 }#toolbox > *:last-child{margin-left: auto;}
 
+
+/*----------------------SECRET*/
+#secret-mask{
+	width: 60vw;
+	height: 200px;
+	transition: 1s;
+}
+
+.secret-mask{
+	background:url("https://source.unsplash.com/random/1200x600") no-repeat center center/contain;
+	clip-path: circle(40px at var(--x) var(--y));
+}.secret-mask:active{
+	clip-path: circle(100px at var(--x) var(--y));
+}
+
 /*---------------------------PLANETS PROJ*/
 .planets{
 	width: 100%;
@@ -126,8 +141,72 @@ fieldset{
 	background-color: #333;
 }
 
+/*------------CLOCK*/
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/*----------------------------MAIN FOOTER*/
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.needle {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+.time {
+  font-size: 60px;
+}
+
+.date {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/*.date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  transition: all 0.5s ease-in;
+  font-size: 12px;
+}*/
+
+/*------------MAIN FOOTER*/
 .main-footer{
 	padding: 2rem;
 	display: flex;

@@ -1,3 +1,4 @@
+/*special thanks to Brad Traversy*/
 let canvas = document.getElementById("drawception");
 let ctx = canvas.getContext("2d");
 const INCREASE_BTN = document.getElementById("increase");
@@ -11,19 +12,8 @@ let size = 5;
 let color = "black";
 let x, y;
 
-
-//control+z consts and variables
-const CTRL = 17;
-const Z_KEY = 90;
-let sessionMemory = [];
-
-document.addEventListener('keydown', function(evt){
-  if(evt.which === Z_KEY && evt.ctrlKey) {
-    console.log('yep');
-  }
-});
-
-
+// Color change input
+COLOR_BTN.addEventListener('change', (evt) => color = evt.target.value);
 // Evts that allows you to draw
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', endPosition);
@@ -75,7 +65,7 @@ function sizeBrushUpdate() {
 }
 
 // Canvas inputs
-COLOR_BTN.addEventListener("change", (evt) => color = evt.target.value);
+
 CLEAR_BTN.addEventListener("click", (evt) => ctx.clearRect(0,0, canvas.width, canvas.height))
 
 INCREASE_BTN.addEventListener("click", () => {
@@ -90,7 +80,7 @@ INCREASE_BTN.addEventListener("click", () => {
 DECREASE_BTN.addEventListener("click", () => {
   size -= 5;
 
-  if(size > 5) {
+  if(size < 5) {
     size = 5;
   }
   sizeBrushUpdate();

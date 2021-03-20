@@ -1,15 +1,15 @@
 const HAND_OPTIONS = {
 	1: {
 		txt: 'rock',
-		symb:  '✊'
+		symb:  '&#9994;'
 	},
 	2: {
 		txt: 'paper',
-		symb:  '✋'
+		symb:  '&#9995;'
 	},
 	3: {
 		txt: 'scissors',
-		symb:  '✌️'
+		symb:  '&#9996'
 	}
 };
 const USER_WINS = [

@@ -32,16 +32,18 @@
 					<p>Draw anything you'd like!</p>
 				</footer>
 			</section>
-			<!--SECRET ANIMATIONS-->
+			<!--SECRET MASK-->
 			<section class="project-section">
 				<header>
 					<h2>This section has a secret 0.o</h2>
 				</header>
 				<div class="project-display">
-					
+					<div id="secret-mask">
+						
+					</div>
 				</div>
 				<footer class="brief-proj-description">
-					<p>(not added yet)Explore it with your mouse.</p>
+					<p>Explore it with your mouse.</p>
 				</footer>
 			</section>
 
@@ -55,15 +57,15 @@
 						<legend>U Pick ↓</legend>
 						<div class="input-form">
 							<input type="radio" id="rock" value="rock" name="u-pick">
-							<label for="rock">✊</label>
+							<label for="rock">&#9994;</label>
 						</div>
 						<div class="input-form">
 							<input type="radio" id="paper" value="paper" name="u-pick">
-							<label for="paper">✋</label>
+							<label for="paper">&#9995;</label>
 						</div>
 						<div class="input-form">
 							<input type="radio" id="scissors" value="scissors" name="u-pick">
-							<label for="scissors">✌️</label>
+							<label for="scissors">&#9996;</label>
 						</div>
 						<div class="input-form">
 							<input type="submit" value="Play!" id="play-game" class="btn" onclick="startGame()">
@@ -122,10 +124,20 @@
 			<!--OUTRO PROJECT-->
 			<section class="project-section">
 				<header>
-					<h2>Thanks for stoppin' by<br><span style="font-size: 1rem">(☞ﾟヮﾟ)☞</span><br>That's it for now</h2>
+					<h2>Time is stunningly precious!</h2>
 				</header>
 				<div class="project-display">
-					<canvas id="canvas-intro" width="250"></canvas>
+					<div class="clock-container">
+						<div class="clock">
+							<div class="needle hour"></div>
+							<div class="needle minute"></div>
+							<div class="needle second"></div>
+							<div class="center-point"></div>
+						</div>
+
+						<div class="time"></div>
+						<div class="date"></div>
+					</div>
 				</div>
 				<footer class="brief-proj-description">
 					<p>Browse more of my portfolio <a href="https://joseriosdev.github.io/">here</a>.</p>
@@ -134,14 +146,15 @@
 
 			<!--MAIN FOOTER-->
 			<footer class="main-footer">
-				<p>This website was build with ♥ by <strong><a href="https://github.com/joseriosdev">@joseriosdev</a></strong> to improve my codding skills</p>
+				<p>Thanks for stoppin' by<br><span style="font-size: 1rem">(☞ﾟヮﾟ)☞ take a look to <strong><a href="https://github.com/joseriosdev">@joseriosdev</a></p>
 			</footer>
 		</main>
 
 		
 		<script type="text/javascript" src="scripts/drawing-app.js"></script>
+		<script type="text/javascript" src="scripts/secret-mask.js"></script>
 		<script type="text/javascript" src="scripts/rock-paper-scissors.js"></script>
 		<script type="text/javascript" src="scripts/weight-outearth.js"></script>
-		<script type="text/javascript" src="scripts/canvas-outro.js"></script>
+		<script type="text/javascript" src="scripts/clock.js"></script>
 	</body>
 </html>
